@@ -12,7 +12,7 @@ import java.util.Map;
  *
  * @author Partha
  */
- interface MongoInterface {
+ public interface MongoInterface {
      String add(String tableName,String json);
      String addByMap(String tableName,Map column);
      String addDefault(String tableName,String json);
