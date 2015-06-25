@@ -210,13 +210,10 @@ abstract class DBHelper implements MongoInterface {
         DBCursor cursor = table.find();
         while (cursor.hasNext()) {
             DBObject updateDocument = cursor.next();
-            System.out.println(updateDocument.toString());
             DBObject searchQuery = cursor.next();
             DBObject dbObject = (DBObject) JSON.parse(json);
             updateDocument.putAll(dbObject.toMap());
-            System.out.println(updateDocument.toString());
             updateDocument.removeField("_id");
-            System.out.println(updateDocument.toString());
             WriteResult result = table.update(searchQuery, updateDocument);
             resList.add(result.isUpdateOfExisting());
         }
