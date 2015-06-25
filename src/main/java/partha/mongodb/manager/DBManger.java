@@ -22,7 +22,6 @@ final class DBManger extends DBHelper {
         if(helperdb==null){
            DBManger db = new DBManger(schema, DBURL, portNumber);
            helperdb=db; 
-           System.out.println("inside singleton");
         }
         return helperdb;
     }
