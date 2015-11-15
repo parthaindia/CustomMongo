@@ -24,5 +24,5 @@ import java.util.Map;
      boolean modifyByCondition(String tableName,String json,Map condition);
      List<Boolean> modifyNotOveride(String tableName,String json,String _id);
      List<Boolean> modifyByConditionNOtOveride(String tableName,Map condition);
-    
+     
 }
